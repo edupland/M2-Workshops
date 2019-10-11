@@ -5,16 +5,20 @@
 </head>
 <body class="container">
 
-<form action="/workshop" method="post">
+<form action="/update-workshop" method="post">
     <div class="form-group">
-        <label for="name">Name</label>
+        <label for="oldname">Worlshop to update</label>
+        <input type="text" name="oldname" class="form-control" id="oldname" placeholder="Workshop to update" required>
+    </div>
+    <div class="form-group">
+        <label for="name">Rename</label>
         <input type="text" name="name" class="form-control" id="name"  placeholder="Workshop Name" required>
     </div>
     <div class="form-group">
-        <label for="description">Description</label>
+        <label for="description">New description</label>
         <input type="text" name="description" class="form-control" id="description" placeholder="Give a description for your workshop" required>
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-primary">Update</button>
     <a type="button" class="btn btn-secondary" href="/">Cancel</a>
 </form>
 

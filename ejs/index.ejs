@@ -1,31 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <% include ./head %>
 </head>
+
 <body class="container">
 
-<div class="jumbotron">
-    <h1>Workshops</h1>
-    <p>here is the list of workshop</p>
-</div>
+    <div class="jumbotron">
+        <h1>Workshops</h1>
+        <p>here is the list of workshop</p>
+    </div>
 
-<a type="button" href="/workshop" class="btn btn-success btn-lg">Create new workshop</a>
+    <a type="button" href="/workshop" class="btn btn-success btn-lg">Create new workshop</a>
+    <a type="button" href="/update-workshop" class="btn btn-secondary btn-lg">Update workshop</a>
+    <a type="button" href="/remove-workshop" class="btn btn-danger btn-lg">Remove workshop</a>
 
-<ul class="list-unstyled"></ul>
-<% workshops.forEach(function(workshop) { %>
+    <ul class="list-unstyled"></ul>
+    <% workshops.forEach(function(workshop) { %>
     <li class="media my-4">
         <div class="media-body">
             <h5 class="mt-0 mb-1"><%= workshop.name %></h5>
-            <%= workshop.description %>        </div>        
+            <%= workshop.description %>
+        </div>
     </li>
-<% }); %>
-</ul>
+    <% }); %>
+    </ul>
 
-<footer>
-    <% include ./footer %>
-</footer>
+    <footer>
+        <% include ./footer %>
+    </footer>
 
 </body>
+
 </html>
