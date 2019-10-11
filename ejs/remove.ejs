@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./head %>
+</head>
+<body class="container">
+
+<form action="/remove-workshop" method="post">
+    <div class="form-group">
+        <label for="name">Workshop to remove</label>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Workshop to remove" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Remove</button>
+    <a type="button" class="btn btn-secondary" href="/">Cancel</a>
+</form>
+
+<footer>
+    <% include ./footer %>
+</footer>
+
+</body>
+</html>
